@@ -66,10 +66,12 @@ If you spot a bug, please create an issue post on the Github page:
 		
 ### ADB returned with 'code/blabla' 1...
 => That means your device isn't connected wirelessly with ADB. Make sure you follow the instructions here: https://developer.android.com/studio/command-line/adb#wireless
+
 => Alternatively, just use USB :) (yeah it sucks, I know)
 		
 ### Something else doesn't work
 => Read this document again please.
+
 => You've re-read it and it's still there? Then submit an issue on Github. I'll see what I can do to help you :)
 
 
