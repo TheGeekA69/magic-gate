@@ -9,13 +9,13 @@ So why Magic Gate?
 Because the commercial alternatives were limited, our outdated. So here's what you need!
 
 
-# Installation:
+ Installation:
 
-## Shortcut: 
-	You can execute shortcut.sh (with sh shortcut.sh). 
-	It will add the 'magicgate' alias to your .bashrc and make the launcher executable.
-
-## Dependencies: adb, scrcpy (if you want to use it), zenity
+Shortcut: 
+	Execute shortcut.sh (with sh shortcut.sh). 
+	It will add the 'magicgate' alias to your .bashrc and allow you to launch it with that command.
+	
+Dependencies: adb, scrcpy (if you want to use it), zenity
 
 	Debian / Ubuntu:
 		sudo apt install adb scrcpy zenity
@@ -46,7 +46,7 @@ If you spot a bug, please create an issue post on the Github page:
 	
 
 
-# Known bugs / FAQ:
+Known bugs / FAQ:
 	- Files with a space in the name are not sent and crash Teleporter
 		=> Replace the space with an underscore ( _ ). Won't fix this, it's a limitation. If you have an idea though, I'm all ears.
 		
