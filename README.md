@@ -1,6 +1,5 @@
 Thank you for downloading Magic Gate!
 
-https://github.io/TheGeekA69/magic-gate
 
 This was a project I coded because I sometimes needed to transfer files quickly, or needed to experiment with my phone and run commands. Thing is, I'm incredibly lazy and my phone was often a hand away - too far away.
 So I coded Magic Gate. What was at first a bunch of modular scripts to be executed in a terminal emulator soon became an entreprise to get a GUI because of popular (aka, my friends) demand.
