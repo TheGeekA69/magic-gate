@@ -1,5 +1,5 @@
 Thank you for downloading Magic Gate!
-https://github.io/TheGeekA69/magic-gate
+https://github.com/TheGeekA69/magic-gate
 
 This was a project I coded because I sometimes needed to transfer files quickly, or needed to experiment with my phone and run commands. Thing is, I'm incredibly lazy and my phone was often a hand away - too far away.
 So I coded Magic Gate. What was at first a bunch of modular scripts to be executed in a terminal emulator soon became an entreprise to get a GUI because of popular (aka, my friends) demand.
@@ -50,7 +50,7 @@ Known bugs / FAQ:
 	- Files with a space in the name are not sent and crash Teleporter
 		=> Replace the space with an underscore ( _ ). Won't fix this, it's a limitation. If you have an idea though, I'm all ears.
 		
-	- "ADB returned with 'code/blabla' 1". 
+	- ADB returned with 'code/blabla' 1... 
 		=> That means your device isn't connected wirelessly with ADB. Make sure you follow the instructions here: https://developer.android.com/studio/command-line/adb#wireless
 		=> Alternatively, just use USB :) (yeah it sucks, I know)
 		
