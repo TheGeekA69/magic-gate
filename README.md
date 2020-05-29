@@ -56,7 +56,7 @@ More importantly: you can download Ubuntu 20.04 LTS from the Windows Store and f
 			
 			
 If you spot a bug, please create an issue post on the Github page:
-	https://github.io/TheGeekA69/magic-gate
+	https://github.com/TheGeekA69/magic-gate
 	
 
 
