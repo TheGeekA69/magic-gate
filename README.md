@@ -2,18 +2,9 @@
 
 
 
-This was a project I thought of because I sometimes needed to transfer files quickly, or needed to experiment with my phone and run commands. Thing is, I'm incredibly lazy and my phone was often a hand away - too far away.
+Magic Gate is a utility written entirely in bash to help you interact with your Android device over USB or Wi-Fi. I have been trying free and commercial utilities over the past years, but they were either paid or outdated. 
 
-So I coded Magic Gate. What was at first a bunch of modular scripts to be executed in a terminal emulator soon became an entreprise to get a GUI because of popular (aka, my friends') demand.
-
-I also had been using Scrcpy (to mirror my phone's screen and interact with it). Credits go to Genymobile over here: https://github.com/Genymobile/scrcpy 
-
-So why Magic Gate? 
-Because the commercial alternatives were limited, our outdated. So here's what you need!
-
-# What does it do?
-
-Magic Gate is (as of now at least) composed of three Modules. Each module has a specific job. They all work either via USB or WiFi.
+Magic Gate is (as of now at least) composed of three Modules. Each module has a specific use:
 
 
 ## Teleporter
@@ -39,41 +30,40 @@ Shell is made to run commands on your Android device, sent from your PC. Useful 
 
 ## Scrcpy
 
-Disclaimer: this module is **not** mine. See above for credits. I tweaked a few settings and applied them by default for a better experience (in my opinion). Feel free to tune them to your taste (looking at you, bitrate).
+Disclaimer: this module is **not** mine. Credits go to Genymobile at https://github.com/Genymobile/scrcpy. I tweaked a few settings and applied them by default for a better experience (in my opinion). Feel free to tune them to your taste (looking at you, bitrate).
 
-So Screen Copy (yeah, that's what it means) mirrors your device's screen and lets you interact with it using mouse and keyboard. Some shortcuts are provided when running the module, the rest can be seen by running `scrcpy` in a terminal. 
+So Screen Copy (yes, that's what it means) mirrors your device's screen and lets you interact with it using mouse and keyboard. Some shortcuts are shown on my website, the rest can be seen by running `scrcpy --help` in a terminal. 
 
 
 
 # Installation:
 
 ## Initialization: 
-Navigate to the MagicGate folder (where you put it):
+Extract the magic-gate-master folder to the root of your account and in a terminal, change directory:
 
-	cd path/to/MagicGate/
+	cd ~/magic-gate-master
 
-Execute shortcut.sh with 
+Execute install.sh with 
 
-	sh shortcut.sh
+	sh install.sh
 	
-and follow the instructions. It will add the 'magicgate' alias to your .bashrc. Use this `magicgate` to start the script.
+and follow the instructions. It will add the 'magicgate' alias to your .bashrc and clean up after the installation. Source your `.bashrc` and type `magicgate` in a terminal to start the script.
 
-**Don't change its location afterwards, or you'll need to run shortcut.sh again!**
 
-## Dependencies: adb, scrcpy (if you want to use it), zenity
+## Dependencies: adb, scrcpy (if you want to use it) and zenity
 
 ### Debian / Ubuntu:
 
 		 sudo apt install adb scrcpy zenity
 		 
-(note: 'scrcpy' might not be found. In that case, install it with snapcraft (https://snapcraft.io.)
+(note: 'scrcpy' might not be found. In that case, install it with snapcraft (https://snapcraft.io) or compile it yourself.
 
 (note 2: zenity is only necessary on Desktop Environments that are *not* GNOME since it is a GNOME package, but it works everywhere.)
 	
 ### Arch:
 		sudo pacman -S adb zenity
 		
-**Check out the AUR for 'scrcpy' or compile it from source and symlink it.**
+**Check out the AUR for 'scrcpy' or compile it from source and add it to your $PATH.**
 			
 ### macOS:
 You'll need homebrew first: https://brew.sh
@@ -85,7 +75,7 @@ Then do:
 			
 ### Other *NIX:
 
-Bruh, if you use something else than the other distros above, you'll know how to make this work.
+If you use something else than the other distros above, I take it you'll know how to make this work.
 		
 ### Windows:
 Why are you doing this to yourself?
@@ -100,15 +90,22 @@ If you spot a bug, please create an issue post!
 
 # Known bugs / FAQ:
 ### Files with a space in the name are not sent and crash Teleporter
-=> Replace the space with an underscore ( _ ). Won't fix this, it's a limitation. If you have an idea though, I'm all ears.
+=> Replace the space with an underscore ( _ ). I won't fix this, it's a limitation of bash/zenity. If you have an idea though, I'm all ears (in the pull section).
 		
 ### ADB returned with 'code/blabla' 1...
 => That means your device isn't connected wirelessly with ADB. Make sure you follow the instructions here:
 
 https://developer.android.com/studio/command-line/adb#wireless
 
-=> Alternatively, just use USB :) (yeah it sucks, I know)
+=> Alternatively, just use USB :)
 		
+### Where is the Magic Gate directory?
+=> On macOS: ~/Library/Application\ Support/MagicGate/
+
+=> On Linux: /opt/magic-gate/
+
+Only change if you know what you are doing!
+
 ### Something else doesn't work
 => Read this document again please.
 

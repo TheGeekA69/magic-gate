@@ -1,24 +1,14 @@
 #!/bin/bash
 
-# Presenting Teleporter
-zenity --text-info --filename=Resources/shellhelp.txt --title "Magic Gate" --width 600 --height 320 --ok-label "Next" --cancel-label "Quit"
-
-if [[ $? -eq 1 ]]; then
-	exit 1
-
-else
-
-# Beginning script
-
 # Checking for known IP address
-				file=ipaddress
+				file=~/ipaddress
 				if test -f "$file"
 				then
 					sleep 0
 				else
 					Response=$(zenity --entry --text "What is your device's IP address?" --title "Scrcpy" --entry-text="")
 
-					echo "phoneip=$Response:5555" >> ipaddress
+					echo "phoneip=$Response:5555" >> ~/ipaddress
 				fi
 
 
@@ -29,7 +19,7 @@ zenity --question --width 300 --text "Do you want to run Shell over USB or WiFi?
 if [[ $? == 0 ]]
 	# Chose over WiFi
 	then
-	source ipaddress
+	source ~/ipaddress
 	adb connect $phoneip
 	
 
@@ -112,5 +102,3 @@ else
 		fi
 		
 	fi
-# Ending script
-fi

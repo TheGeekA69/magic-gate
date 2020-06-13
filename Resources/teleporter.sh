@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# Presenting Teleporter
-zenity --text-info --filename=Resources/teleporterhelp.txt --title "Magic Gate" --width 600 --height 320 --ok-label "Next" --cancel-label "Quit"
 
-if [[ $? -eq 1 ]]; then
-	exit 1
-
-else
 
 	# Checking for known IP address
 				file=ipaddress
@@ -140,4 +134,3 @@ else
 
 fi
 
-fi
