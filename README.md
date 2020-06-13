@@ -39,15 +39,15 @@ So Screen Copy (yes, that's what it means) mirrors your device's screen and lets
 # Installation:
 
 ## Initialization: 
-Extract the magic-gate-master folder to the root of your account and in a terminal, change directory:
+Extract the magic-gate folder **to the root** of your account and in a terminal, change directory:
 
-	cd ~/magic-gate-master
+	cd ~/magic-gate
 
 Execute install.sh with 
 
 	sh install.sh
 	
-and follow the instructions. It will add the 'magicgate' alias to your .bashrc and clean up after the installation. Source your `.bashrc` and type `magicgate` in a terminal to start the script.
+and enter your password as prompted. Magic Gate needs to transfer it files to directories requiring root access. It will add the 'magicgate' alias to your `.bashrc` (or `.zshrc` on macOS) and clean up after the installation. Source your `.bashrc` (or `.zshrc`) and type `magicgate` in a terminal to start the script.
 
 
 ## Dependencies: adb, scrcpy (if you want to use it) and zenity
