@@ -9,7 +9,7 @@ then
 	# Move folder 
 	sudo mkdir /opt/magic-gate
 	cd
-	sudo cp -r magic-gate/ /opt/magic-gate/
+	sudo cp -r magic-gate-master/ /opt/magic-gate/
 	rm -rf magic-gate
 
 	# Editing the .bashrc
@@ -26,12 +26,12 @@ else
 	# Move folder
 	sudo mkdir ~/Library/Application\ Support/MagicGate/
 	cd
-	sudo cp -r ~/magic-gate/ ~/Library/Application\ Support/MagicGate/
+	sudo cp -r ~/magic-gate-master/ ~/Library/Application\ Support/MagicGate/
 	rm -rf ~/magic-gate
 	
-	# Editing the .bashrc
-	echo "alias magicgate='sh ~/Library/Application\ Support/MagicGate/magicgate.sh' " >> ~/.bashrc
-	zenity --info --width 500 --text="Done. Type 'source ~/.bashrc' or open a new terminal window to use Magic Gate."
+	# Editing the .zshrc
+	echo "alias magicgate='sh ~/Library/Application\ Support/MagicGate/magicgate.sh' " >> ~/.zshrc
+	zenity --info --width 500 --text="Done. Type 'source ~/.zshrc' or open a new terminal window to use Magic Gate."
 	
 	# Renaming the launcher and deleting the other one
 	sudo mv ~/Library/Application\ Support/MagicGate/mgmac.sh ~/Library/Application\ Support/MagicGate/magicgate.sh
