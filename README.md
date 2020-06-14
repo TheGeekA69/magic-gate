@@ -1,6 +1,7 @@
 # Magic Gate
 
-
+https://github.com/TheGeekA69/magic-gate
+https://thegeeka69.com/magic-gate/
 
 Magic Gate is a utility written entirely in bash to help you interact with your Android device over USB or Wi-Fi. I have been trying free and commercial utilities over the past years, but they were either paid or outdated. 
 
@@ -41,11 +42,11 @@ So Screen Copy (yes, that's what it means) mirrors your device's screen and lets
 ## Initialization: 
 Extract the magic-gate folder **to the root** of your account and in a terminal, change directory:
 
-	cd ~/magic-gate
+	cd ~/magic-gate-master
 
 Execute install.sh with 
 
-	sh install.sh
+`sh install-linux.sh` for any Linux-based system or `sh install-macos.sh` on Macs
 	
 and enter your password as prompted. Magic Gate needs to transfer it files to directories requiring root access. It will add the 'magicgate' alias to your `.bashrc` (or `.zshrc` on macOS) and clean up after the installation. Source your `.bashrc` (or `.zshrc`) and type `magicgate` in a terminal to start the script.
 
